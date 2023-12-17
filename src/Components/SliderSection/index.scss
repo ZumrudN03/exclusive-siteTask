@@ -1,0 +1,66 @@
+.sliderSection {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 50px 0px;
+  display: flex;
+  justify-content: space-between;
+  &_category {
+    ul {
+      width: 217px;
+      height: 344px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid lightgray;
+      .sliderSection_category_fashion {
+        width: 190px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  &_slider {
+    width: 892px;
+    height: 344px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    color: white;
+    &_textBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      padding-left: 40px;
+      &_iphoneSeries {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 45px;
+          height: 45px;
+        }
+
+      }
+      &_upTo{
+        font-size: 48px;
+        font-weight: 600;
+      }
+      &_shopNow{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        a{
+          text-decoration: underline;
+          color: white;
+        }
+      }
+    }
+    &_img {
+      margin-top: 20px;
+      width: 496px;
+      height: 352px;
+    }
+  }
+}

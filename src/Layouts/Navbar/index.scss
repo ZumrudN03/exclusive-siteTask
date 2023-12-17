@@ -1,0 +1,64 @@
+.navbar {
+  &_upside_bg {
+    background-color: black;
+    max-width: 100%;
+    .navbar_upside {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      color: white;
+      justify-content: space-between;
+      p {
+        font-size: 14px;
+        padding: 10px 0px;
+        a {
+          color: white;
+          text-decoration: underline;
+          font-weight: 600;
+        }
+      }
+      select {
+        background-color: black;
+        color: white;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  .navMenu_bg {
+    border-bottom: 1px solid lightgray;
+    max-width: 100%;
+    .navMenu {
+      display: flex;
+      max-width: 1170px;
+      margin: 0 auto;
+      justify-content: space-between;
+      padding: 30px 0px 20px 0px;
+      .navbar_logo {
+        font-size: 24px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .navbar_menu {
+        display: flex;
+        gap: 30px;
+        a {
+          color: black;
+        }
+      }
+      .navbar_icons {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        input {
+          border: none;
+          outline: none;
+        }
+        i {
+          cursor: pointer;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

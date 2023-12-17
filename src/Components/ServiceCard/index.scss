@@ -1,0 +1,43 @@
+.serviceCard {
+  width: 255px;
+  height: 161px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  &_icon {
+    width: 80px;
+    height: 80px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    i {
+      font-size: 26px;
+      color: white;
+      background-color: black;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+  }
+  &_textBox{
+    h4{
+        font-size: 20px;
+        font-weight: 600;
+        padding-bottom: 5px;
+        white-space: nowrap
+
+    }
+    p{
+        font-size: 14px;
+        font-weight: 400;
+
+    }
+  }
+}
