@@ -1,0 +1,130 @@
+.newArrivalSection {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    &_header {
+        .featured {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+
+            p {
+                font-weight: 600;
+                color: #DB4444;
+            }
+
+            .blok {
+                width: 20px;
+                height: 40px;
+                background-color: #DB4444;
+                border-radius: 4px;
+            }
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+    }
+
+    &_cards {
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: white;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgb(167, 167, 167);
+            width: 242px;
+        }
+
+        a {
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: underline;
+            color: rgb(204, 204, 204);
+        }
+
+        &_left {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-position-x: center;
+            background-position-y: bottom;
+            background-repeat: no-repeat;
+            background-image: url("https://s3-alpha-sig.figma.com/img/1c36/0f79/0c1817d3afa266b3c9f8c81ff0ed4428?Expires=1704067200&Signature=bxvzKJAYPrwP2vjNiqjZlRMETJxGW5pga1AR66eCa3Uoi11~tASAcfn5P1iWo0OF1rdV63MN9uQk5D7iHR0FdDcz3S4Lxq4fG5rsuuToRP6-Rr2Tlh2fy1xZS7EDKcjF-rh3rTUf8ACKe21S6tBEJ9idPePQ768DPdYBPCBGASQpQTY1QRmDY3fqbFTazjC7Powi0VfYwjU4NIdeqnvzKFrEBIVtNw0QaHI0h~GWQj2rAnHIZXYu1P2N30KXXmx9RYwPagYDuZhvVUBJqLgw4bPP3c5htAWnNsmtjFAgmqQfzEmCCjSIwT8TLxrJCw53lSGuAJRsZXArvOwzmta3vg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+            width: 570px;
+            height: 600px;
+            background-color: black;
+            padding: 0px 0px 30px 30px;
+            gap: 16px;
+        }
+
+        &_right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &_up {
+                width: 570px;
+                height: 286px;
+                background-image: url("https://s3-alpha-sig.figma.com/img/455c/8d64/08463f7e8f57dd3048a2444dbfa0cb90?Expires=1704067200&Signature=THE1Zzpx~kINUu7Hb1MfmmCTHu8R4yv7xFJWvQtawcULD~tN6GNbjW3CRpS7wWUYiKf1EvO0XWJKkhTCgor~Ws9CTMLp1pfL7pl3~Qv0kOJdwHW0fO-yQoNXGXNx7IS7LRZRXT4GqSblrpa-TQhWeKImRQb17C2atxquwrNCZDST9HC2LA1TSP2YE4a8F9lw3RyKUv40nSpkJ8eSICFmxgbfrDWFhDJKh2hRx6gwBp78pMAx8muaRrHgggRXoJC3aipykKWtcRVmVjb68cCV0DUHG7tk5Qz5XneQMUItt9i3A6dIJFg4HFz1iRX648MbBNFUho5WERjTGWst8YTxxg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+                background-repeat: no-repeat;
+                background-size: 432px 286px;
+                background-color: #0D0D0D;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding: 0px 30px 30px 0px;
+                gap: 16px;
+            }
+
+            &_down {
+                display: flex;
+                justify-content: space-between;
+
+                .speakers {
+                    background-image: url("https://s3-alpha-sig.figma.com/img/e565/9d57/2977438364a41d7e8c9d1e9a794d43ed?Expires=1704067200&Signature=ZEZvhdKP-wq506pmDCWI2-oJj9ORtoKWPPmKMDhH~cigT2wAE8eL4iTMUcadbcwoGuy3NlfgYnpb5lHRaL6LUljAjm-6uVAOSeJF1mve12qhaCjg0mu97~uq~W-wVYzenX4t83YyMIZ8-lHiCk3XpsNM8-Y9j~ofVGUxkPtaAGfQ7kmpD-7avi3At8XzA8Lz-QdHMG7PE782lhkuDd65oDsWabTfRHeA13e2hrzPHq1Nh3Ztc2No7HMD4X0Yx4AE59RP2Xy~alx6QIwZmRi2XX0MFtwyiR6ffsQT21AykF4GalSLCTMIsZqdIO1rCH30Tk0C7PXgSlniA-mP9vAIkQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+                    width: 270px;
+                    height: 284px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: black;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    padding: 0px 0px 24px 24px;
+                    gap: 8px;
+                }
+
+                .perfume {
+                    background-image: url("https://s3-alpha-sig.figma.com/img/1531/5cd1/5102562cf220504d288fa568eaa816dd?Expires=1704067200&Signature=CWjDyb7Wjno6bitoiuIcvo-tcczgtsJuwnQzQAWlpIQW7qqFmDUTKjamR02beoXHj9Jae4v7J37djr-YV6DXv4qBymE1~9XDOJUctoMetMdPF0Fi~EIUevh2UAWr4L0OKLKsY-Q2zbLjN2-LVbj~6POYr1JPkzEhoZncHbE3A9w0NwhI8H77s2LQUJk~iSbpjV2kbK77rpMuThxFZOd02Sbz0mHB1vPi5IUuRUbTynHKYvtTfUHZMB4xvCJXHO5j-0uJY7MVnQhRtGS0ijycg6~0S1kG5g88S1G9~sVD7d1yzbVk7gGgBVLHHWWATzUttfTx8pyYLVQklSaQAwxl7g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+                    width: 270px;
+                    height: 284px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: black;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    padding: 0px 0px 24px 24px;
+                    gap: 8px;
+                }
+            }
+        }
+    }
+}

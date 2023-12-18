@@ -1,11 +1,11 @@
 import React from 'react'
 import './index.scss'
 
-function ServiceCard({serviceDesc, serviceText}) {
+function ServiceCard({serviceDesc, serviceText, icon}) {
   return (
     <div className='serviceCard'>
         <div className="serviceCard_icon">
-        <i class="fa-solid fa-truck-fast"></i>
+        <i class={icon}></i>
         </div>
         <div className="serviceCard_textBox">
             <h4>{serviceText}</h4>
