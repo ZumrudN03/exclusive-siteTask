@@ -13,8 +13,8 @@ function ExploreOurProductsSection() {
                 <div className="exploreOurProductsSection_header_text">
                     <p>Explore Our Products</p>
                     <div className="exploreOurProductsSection_header_icons">
-                        <i class="fa-solid fa-arrow-left-long"></i>
-                        <i class="fa-solid fa-arrow-right-long"></i>
+                        <i className="fa-solid fa-arrow-left-long"></i>
+                        <i className="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
             </div>

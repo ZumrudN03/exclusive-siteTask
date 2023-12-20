@@ -25,8 +25,6 @@ function BuyNowSection() {
                             <h4>35</h4>
                             <p>Seconds</p>
                         </div>
-
-
                     </div>
                     <button>Buy Now!</button>
                 </div>

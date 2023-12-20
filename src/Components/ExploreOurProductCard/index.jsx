@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './index.scss'
+import { SearchContext } from '../../Context/search'
+import { BasketContext } from '../../Context/basket'
 
 function ExploreOurProductCard() {
     const [exploreCard, setExploreCard] = useState([])
+    const {search} = useContext(SearchContext)
+    const {addBasket} = useContext(BasketContext)
 
     useEffect(() => {
         getExploreCard()
@@ -16,16 +20,19 @@ function ExploreOurProductCard() {
 
     return (
         <div className='exploreOurProductCard'>
-            {exploreCard.slice(4, 12).map((x) => (
-                <div className='exploreCard'>
+            {exploreCard
+            .filter((x)=> x.name.toLowerCase().includes(search.toLowerCase())
+            )
+            .map((x) => (
+                <div key={x.id} className='exploreCard'>
                     <div className="exploreCard_img">
                         <div className="exploreCard_img_icon">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-regular fa-eye"></i>
+                            <i className="fa-regular fa-heart"></i>
+                            <i className="fa-regular fa-eye"></i>
                         </div>
                         <img src={x.image} alt="" />
                         <div className="cardHover">
-                            <p>Add To Cart</p>
+                            <p onClick={()=>addBasket(x)}>Add To Cart</p>
                         </div>
                     </div>
                     <div className="exploreCard_text">
@@ -33,13 +40,13 @@ function ExploreOurProductCard() {
                         <div className="exploreCard_text_price">
                             <p className='price'>${x.price}</p>
                             <div className='exploreCard_text_price_star'>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
                             </div>
-                            <p>(65)</p>
+                            <p>({x.comments})</p>
                         </div>
                     </div>
                 </div>

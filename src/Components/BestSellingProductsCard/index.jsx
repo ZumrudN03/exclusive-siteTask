@@ -16,11 +16,11 @@ function BestSellingProductsCard() {
   return (
     <div className='bestSellingProductsCard'>
       {bestSellingCard.slice(0, 4).map((x) => (
-        <div className='bestSellingCard'>
+        <div key={x.id} className='bestSellingCard'>
           <div className="bestSellingCard_img">
             <div className="bestSellingCard_img_icon">
-              <i class="fa-regular fa-heart"></i>
-              <i class="fa-regular fa-eye"></i>
+              <i className="fa-regular fa-heart"></i>
+              <i className="fa-regular fa-eye"></i>
             </div>
             <img src={x.image} alt="" />
             <div className="cardHover">
@@ -35,13 +35,13 @@ function BestSellingProductsCard() {
             </div>
             <div className="bestSellingCard_text_comment">
               <div className='bestSellingCard_text_comment_star'>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </div>
-              <p>(65)</p>
+              <p>({x.comments})</p>
             </div>
           </div>
         </div>

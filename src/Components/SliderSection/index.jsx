@@ -8,11 +8,11 @@ function SliderSection() {
         <ul>
           <li className="sliderSection_category_fashion">
             <p>Woman's Fashion</p>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i className="fa-solid fa-chevron-right"></i>
           </li>
           <li className="sliderSection_category_fashion">
             <p>Men's Fashion</p>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i className="fa-solid fa-chevron-right"></i>
           </li>
           <li>Electronics</li>
           <li>Home & Lifestyle</li>
@@ -37,7 +37,7 @@ function SliderSection() {
           </div>
           <div className="sliderSection_slider_textBox_shopNow">
             <a href="#">Shop Now</a>
-            <i class="fa-solid fa-arrow-right-long"></i>
+            <i className="fa-solid fa-arrow-right-long"></i>
           </div>
         </div>
         <div className="sliderSection_slider_img">

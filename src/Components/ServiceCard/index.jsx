@@ -5,7 +5,7 @@ function ServiceCard({serviceDesc, serviceText, icon}) {
   return (
     <div className='serviceCard'>
         <div className="serviceCard_icon">
-        <i class={icon}></i>
+        <i className={icon}></i>
         </div>
         <div className="serviceCard_textBox">
             <h4>{serviceText}</h4>

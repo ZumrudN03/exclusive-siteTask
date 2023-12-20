@@ -11,7 +11,7 @@ function Footer() {
             <p>Get 10% off your first order</p>
             <div className='footer_inp'>
                 <input type="text" placeholder="Enter your email"/>
-                <i class="fa-solid fa-paper-plane"></i>
+                <i className="fa-solid fa-paper-plane"></i>
             </div>
         </div>
         <div className="support">
@@ -48,10 +48,10 @@ function Footer() {
                 </div>
             </div>
             <div className="footer_icons">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin-in"></i>
+            <i className="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-linkedin-in"></i>
             </div>
         </div>
       </div>

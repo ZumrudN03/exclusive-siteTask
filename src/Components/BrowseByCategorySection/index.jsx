@@ -13,8 +13,8 @@ function BrowseByCategorySection() {
         <div className="BrowseByCategorySection_header_text">
           <p>Browse By Category</p>
           <div className="BrowseByCategorySection_header_icons">
-          <i class="fa-solid fa-arrow-left-long"></i>
-          <i class="fa-solid fa-arrow-right-long"></i>
+          <i className="fa-solid fa-arrow-left-long"></i>
+          <i className="fa-solid fa-arrow-right-long"></i>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.scss'
+import FlashSalesSlider from '../FlashSalesSlider'
 
 function FlashSalesSection() {
     return (
@@ -14,12 +15,12 @@ function FlashSalesSection() {
                         <p>Flash Sales</p>
                     </div>
                     <div className="flashSalesSection_header_icons">
-                        <i class="fa-solid fa-arrow-left-long"></i>
-                        <i class="fa-solid fa-arrow-right-long"></i>
+                        <i className="fa-solid fa-arrow-left-long"></i>
+                        <i className="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
             </div>
-
+            <FlashSalesSlider/>
             <div className="flashSalesSection_btn">
                 <button>View All Products</button>
             </div>
