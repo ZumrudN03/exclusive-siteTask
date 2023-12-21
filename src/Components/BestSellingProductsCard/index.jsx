@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './index.scss'
+import { BasketContext } from '../../Context/basket'
 function BestSellingProductsCard() {
   const [bestSellingCard, setBestSellingCard] = useState([])
+  const {addBasket} = useContext(BasketContext)
+
 
   useEffect(() => {
     getBestSellingCard();
@@ -23,7 +26,7 @@ function BestSellingProductsCard() {
               <i className="fa-regular fa-eye"></i>
             </div>
             <img src={x.image} alt="" />
-            <div className="cardHover">
+            <div className="cardHover" onClick={()=>addBasket(x)}>
               <p>Add To Cart</p>
             </div>
           </div>

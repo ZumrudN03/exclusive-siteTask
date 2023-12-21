@@ -1,0 +1,20 @@
+.wishlist{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px 0px;
+    &_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            font-size: 20px;
+        }
+        button{
+            font-size: 16px;
+            padding: 16px 48px;
+            background-color: transparent;
+            border: 2px solid lightgray;
+            border-radius: 4px;
+        }
+    }
+}

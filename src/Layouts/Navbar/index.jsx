@@ -1,10 +1,15 @@
 import React, { useContext } from "react";
 import "./index.scss";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { SearchContext } from "../../Context/search";
+import { BasketContext } from "../../Context/basket";
+import { WishlistContext } from "../../Context/wishlist";
 
 function Navbar() {
   const { heandleSearch } = useContext(SearchContext)
+  const { basket } = useContext(BasketContext)
+  const { wishlist } = useContext(WishlistContext)
+
   return (
     <div className="navbar">
       <div className="navbar_upside_bg">
@@ -23,7 +28,7 @@ function Navbar() {
       <div className="navMenu_bg">
         <div className="navMenu">
           <div className="navbar_logo">
-            <p>Exclusive</p>
+            <Link to={"/"}><p>Exclusive</p></Link>
           </div>
           <div className="navbar_menu">
             <NavLink
@@ -70,7 +75,17 @@ function Navbar() {
           <div className="navbar_icons">
             <input type="text" placeholder="What are you looking for?" onChange={(e) => heandleSearch(e)} />
             <i className="fa-solid fa-magnifying-glass"></i>
-            <i className="fa-regular fa-heart"></i>
+            <NavLink
+              to="/wishlist"
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "#DB4444" : "black",
+                };
+              }}
+            >
+              <i className="fa-regular fa-heart"><sup>{wishlist.length ? wishlist.length : "0"}</sup></i>
+            </NavLink>
+            
             <NavLink
               to="/basket"
               style={({ isActive }) => {
@@ -79,9 +94,9 @@ function Navbar() {
                 };
               }}
             >
-              <i className="fa-solid fa-cart-shopping"></i>
+              <i className="fa-solid fa-cart-shopping"><sup>{basket.length ? basket.length : "0"}</sup></i>
             </NavLink>
-            
+
           </div>
         </div>
       </div>

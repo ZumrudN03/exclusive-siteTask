@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './index.scss'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { BasketContext } from '../../Context/basket';
+import { WishlistContext } from '../../Context/wishlist';
 function FlashSalesCard() {
     const [flashCard, setFlashCard] = useState([])
+    const {addBasket} = useContext(BasketContext)
+    const {addWishlist} = useContext(WishlistContext)
+
 
     useEffect(() => {
         fetch("https://657ef0619d10ccb465d58d01.mockapi.io/api/products/products")
@@ -53,11 +58,11 @@ function FlashSalesCard() {
                     <div key={x.id} className='flashCard'>
                         <div className="flashCard_img">
                             <div className="flashCard_img_icon">
-                                <i className="fa-regular fa-heart"></i>
+                                <i className="fa-regular fa-heart" onClick={()=>addWishlist(x)}></i>
                                 <i className="fa-regular fa-eye"></i>
                             </div>
                             <img src={x.image} alt="" />
-                            <div className="cardHover">
+                            <div className="cardHover" onClick={()=>addBasket(x)}>
                                 <p>Add To Cart</p>
                             </div>
                         </div>
@@ -65,7 +70,7 @@ function FlashSalesCard() {
                             <p className='name'>{x.name}</p>
                             <div className="flashCard_text_price">
                                 <p className='price'>${x.price}</p>
-                                <p className='oldPrice'>${x.oldPrice}</p>
+                                <p className='oldPrice'>${x.oldPrice?x.oldPrice:(x.price*2)}</p>
                             </div>
                             <div className="flashCard_text_comment">
                                 <div className='flashCard_text_comment_star'>

@@ -4,15 +4,18 @@ import './index.css';
 import App from './App';
 import SearchProvider from './Context/search';
 import BasketProvider from './Context/basket';
+import WishlistProvider from './Context/wishlist';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BasketProvider>
-      <SearchProvider>
-        <App />
-      </SearchProvider>
-    </BasketProvider>
+    <WishlistProvider>
+      <BasketProvider>
+        <SearchProvider>
+          <App />
+        </SearchProvider>
+      </BasketProvider>
+    </WishlistProvider>
   </React.StrictMode>
 );
 
