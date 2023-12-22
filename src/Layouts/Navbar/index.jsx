@@ -4,9 +4,10 @@ import { Link, NavLink } from "react-router-dom";
 import { SearchContext } from "../../Context/search";
 import { BasketContext } from "../../Context/basket";
 import { WishlistContext } from "../../Context/wishlist";
+import SearchBar from "../../Components/SearchBar";
 
 function Navbar() {
-  const { heandleSearch } = useContext(SearchContext)
+  const { heandleSearch ,showDiv} = useContext(SearchContext)
   const { basket } = useContext(BasketContext)
   const { wishlist } = useContext(WishlistContext)
 
@@ -73,7 +74,10 @@ function Navbar() {
             </NavLink>
           </div>
           <div className="navbar_icons">
+            <div className="search_div">
             <input type="text" placeholder="What are you looking for?" onChange={(e) => heandleSearch(e)} />
+            {showDiv && <SearchBar/>}
+            </div>
             <i className="fa-solid fa-magnifying-glass"></i>
             <NavLink
               to="/wishlist"

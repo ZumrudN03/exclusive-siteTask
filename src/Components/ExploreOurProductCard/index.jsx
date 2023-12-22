@@ -2,11 +2,15 @@ import React, { useContext, useEffect, useState } from 'react'
 import './index.scss'
 import { SearchContext } from '../../Context/search'
 import { BasketContext } from '../../Context/basket'
+import { WishlistContext } from '../../Context/wishlist'
+import { Link } from 'react-router-dom'
 
 function ExploreOurProductCard() {
     const [exploreCard, setExploreCard] = useState([])
     const {search} = useContext(SearchContext)
     const {addBasket} = useContext(BasketContext)
+  const {addWishlist} = useContext(WishlistContext)
+
 
     useEffect(() => {
         getExploreCard()
@@ -27,8 +31,8 @@ function ExploreOurProductCard() {
                 <div key={x.id} className='exploreCard'>
                     <div className="exploreCard_img">
                         <div className="exploreCard_img_icon">
-                            <i className="fa-regular fa-heart"></i>
-                            <i className="fa-regular fa-eye"></i>
+                            <i className="fa-regular fa-heart" onClick={()=>addWishlist(x)}></i>
+                            <Link to={`/detail/${x.id}`}><i className="fa-regular fa-eye"></i></Link>
                         </div>
                         <img src={x.image} alt="" />
                         <div className="cardHover">

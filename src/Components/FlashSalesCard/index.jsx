@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { BasketContext } from '../../Context/basket';
 import { WishlistContext } from '../../Context/wishlist';
+import { Link } from 'react-router-dom';
 function FlashSalesCard() {
     const [flashCard, setFlashCard] = useState([])
     const {addBasket} = useContext(BasketContext)
@@ -59,7 +60,7 @@ function FlashSalesCard() {
                         <div className="flashCard_img">
                             <div className="flashCard_img_icon">
                                 <i className="fa-regular fa-heart" onClick={()=>addWishlist(x)}></i>
-                                <i className="fa-regular fa-eye"></i>
+                                <Link to={`/detail/${x.id}`}><i className="fa-regular fa-eye"></i></Link>
                             </div>
                             <img src={x.image} alt="" />
                             <div className="cardHover" onClick={()=>addBasket(x)}>

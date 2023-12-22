@@ -53,9 +53,18 @@
         display: flex;
         gap: 30px;
         align-items: center;
-        input {
-          border: none;
-          outline: none;
+        .search_div{
+        position: relative;
+
+          input {
+            border: none;
+            outline: none;
+            width: 250px;
+            padding-left: 8px;
+          }
+          .showDiv{
+            position: absolute;
+          }
         }
         i {
           cursor: pointer;

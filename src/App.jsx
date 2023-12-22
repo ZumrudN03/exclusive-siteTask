@@ -4,6 +4,7 @@ import HomePage from "./Pages/Home";
 import MainLayout from "./Layouts/MainLayout";
 import Basket from "./Pages/Basket";
 import Wishlist from "./Pages/Wishlist";
+import Detail from "./Pages/Detail";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/detail/:id" element={<Detail/>} />
         </Route>
       </Routes>
     </BrowserRouter>

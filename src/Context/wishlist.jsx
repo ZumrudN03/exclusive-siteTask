@@ -9,7 +9,7 @@ function WishlistProvider({ children }) {
     function addWishlist(item) {
         const index = wishlist.findIndex((x) => x.id === item.id)
         if (index === -1) {
-            setWishlist([...wishlist, { ...item }])
+            setWishlist([...wishlist, { ...item , isActive: true}])
             return
         } else {
             removeWishlist(item)

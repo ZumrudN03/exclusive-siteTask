@@ -1,9 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './index.scss'
 import { BasketContext } from '../../Context/basket'
+import { WishlistContext } from '../../Context/wishlist'
+import { Link } from 'react-router-dom'
 function BestSellingProductsCard() {
   const [bestSellingCard, setBestSellingCard] = useState([])
   const {addBasket} = useContext(BasketContext)
+  const {addWishlist} = useContext(WishlistContext)
+
 
 
   useEffect(() => {
@@ -22,8 +26,8 @@ function BestSellingProductsCard() {
         <div key={x.id} className='bestSellingCard'>
           <div className="bestSellingCard_img">
             <div className="bestSellingCard_img_icon">
-              <i className="fa-regular fa-heart"></i>
-              <i className="fa-regular fa-eye"></i>
+              <i className={`${x.isActive ? "fa-solid" : "fa-regular" } fa-heart`} onClick={()=>addWishlist(x)}></i>
+              <Link to={`/detail/${x.id}`}><i className="fa-regular fa-eye"></i></Link>
             </div>
             <img src={x.image} alt="" />
             <div className="cardHover" onClick={()=>addBasket(x)}>
