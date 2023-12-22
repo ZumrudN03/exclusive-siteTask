@@ -2,24 +2,29 @@
   max-width: 1170px;
   margin: 0 auto;
   padding: 50px 0px;
+
   &_header {
     span {
       color: gray;
       font-size: 14px;
     }
+
     p {
       font-size: 14px;
     }
   }
+
   &_card {
     display: flex;
     margin: 50px 0px;
     justify-content: space-between;
+
     &_slider {
       display: flex;
       flex-direction: column;
       height: 600px;
       justify-content: space-between;
+
       img {
         width: 170px;
         height: 138px;
@@ -28,6 +33,7 @@
         border-radius: 4px;
       }
     }
+
     &_img {
       width: 500px;
       height: 600px;
@@ -37,53 +43,65 @@
       background-color: lightgray;
       border-radius: 4px;
     }
+
     &_desc {
       width: 400px;
+
       h3 {
         font-size: 24px;
         font-weight: 600;
       }
+
       &_comments {
         display: flex;
         align-items: center;
         margin: 10px 0px;
+
         .review {
           padding: 0px 10px;
           border-right: 2px solid rgb(171, 171, 171);
           font-size: 14px;
           color: gray;
         }
+
         .stock {
           font-size: 14px;
           color: #0f6;
           padding-left: 8px;
         }
       }
+
       .price {
         font-size: 24px;
       }
+
       .text {
         font-size: 14px;
         padding: 10px 0px;
       }
+
       &_color {
         display: flex;
         align-items: center;
         gap: 8px;
         padding: 10px 0px;
         border-top: 3px solid lightgray;
+
         p {
           font-size: 20px;
         }
       }
+
       &_size {
         display: flex;
         align-items: center;
         gap: 15px;
+
         h5 {
           font-size: 20px;
           font-weight: 400;
         }
+
         p {
           font-size: 14px;
           width: 32px;
@@ -93,43 +111,17 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          cursor: pointer;
         }
       }
-      &_btns {
-        display: flex;
-        // justify-content: space-between;
-        align-items: center;
-        .counter {
-          display: flex;
-          align-items: center;
 
-          button {
-            height: 44px;
-            width: 40px;
-            font-size: 30px;
-            border: 1px solid gray;
-            cursor: pointer;
-          }
-          p {
-            height: 44px;
-            width: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            border: 1px solid gray;
-          }
-          .increase {
-            background-color: #db4444;
-            border: none;
-            border-radius: 0px 4px 4px 0px;
-            color: white;
-          }
-          .decrease {
-            border-radius: 4px 0px 0px 4px;
-          }
-        }
-        .buyNow {
+      &_btn {
+        padding: 26px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .detail_basket {
           height: 44px;
           padding: 0px 48px;
           background-color: #db4444;
@@ -138,41 +130,48 @@
           border-radius: 4px;
           cursor: pointer;
         }
-        .wishlist {
-          width: 44px;
-          // height: 0px;
-          border: 1px solid gray;
+
+        .detail_wishlist {
+          height: 44px;
+          padding: 0px 48px;
+          background-color: #db4444;
+          border: none;
+          color: white;
           border-radius: 4px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           cursor: pointer;
         }
       }
+
       &_service {
         width: 400px;
         height: 180px;
         border: 1px solid gray;
         border-radius: 4px;
+
         h6 {
           font-size: 16px;
           font-weight: 500;
         }
+
         p {
           font-size: 12px;
           text-decoration: underline;
+          cursor: pointer;
         }
+
         .service {
           display: flex;
           align-items: center;
           gap: 16px;
           padding: 24px 51px 24px 16px;
+
           i {
             font-size: 20px;
             width: 40px;
             display: flex;
             justify-content: center;
           }
+
           // padding: 24px 16px;
         }
       }

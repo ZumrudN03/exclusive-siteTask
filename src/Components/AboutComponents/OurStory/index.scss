@@ -1,0 +1,26 @@
+.ourStory {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    &_img {
+        img {
+            width: 800px;
+            height: 500px;
+            object-fit: cover;
+        }
+    }
+    &_textBox{
+        width: 525px;
+        h1{
+            font-size: 50px;
+            font-weight: 600;
+            padding-bottom: 16px;
+        }
+        p{
+            padding-top: 24px;
+        }
+    }
+}

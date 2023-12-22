@@ -1,0 +1,13 @@
+import React from 'react'
+import FlashSalesCard from '../../FlashSalesCard'
+import './index.scss'
+
+function FlashSalesSlider() {
+  return (
+    <div className='flashSalesSlider'>
+        <FlashSalesCard/>
+    </div>
+  )
+}
+
+export default FlashSalesSlider

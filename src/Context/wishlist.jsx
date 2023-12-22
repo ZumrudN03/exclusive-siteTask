@@ -1,30 +1,32 @@
-import React, { createContext, useState } from 'react'
-import useLocalStrg from '../Hook/useLocalStrg'
+import React, { createContext, useState } from 'react';
+import useLocalStrg from '../Hook/useLocalStrg';
 
-export const WishlistContext = createContext()
+export const WishlistContext = createContext();
 
 function WishlistProvider({ children }) {
-    const [wishlist, setWishlist] = useLocalStrg("wishlist",[])
+    const [wishlist, setWishlist] = useLocalStrg("wishlist", []);
+    const [wishlisted, setWishlisted] = useState(false);
 
     function addWishlist(item) {
-        const index = wishlist.findIndex((x) => x.id === item.id)
+        const index = wishlist.findIndex((x) => x.id === item.id);
         if (index === -1) {
-            setWishlist([...wishlist, { ...item , isActive: true}])
-            return
+            setWishlist([...wishlist, { ...item }]);
+            setWishlisted(true);
         } else {
-            removeWishlist(item)
+            removeWishlist(item);
         }
     }
 
     function removeWishlist(item) {
-        setWishlist(wishlist.filter((x) => x.id !== item.id))
+        setWishlist(wishlist.filter((x) => x.id !== item.id));
+        setWishlisted(false);
     }
 
     return (
-        <WishlistContext.Provider value={{ wishlist, addWishlist, removeWishlist }}>
+        <WishlistContext.Provider value={{ wishlist, addWishlist, removeWishlist, wishlisted }}>
             {children}
         </WishlistContext.Provider>
-    )
+    );
 }
 
-export default WishlistProvider
+export default WishlistProvider;

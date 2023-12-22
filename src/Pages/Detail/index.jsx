@@ -7,9 +7,8 @@ import { WishlistContext } from "../../Context/wishlist";
 
 function Detail() {
   const [detail, setDetail] = useState(null);
-  const {addBasket} = useContext(BasketContext)
-  const {addWishlist} = useContext(WishlistContext)
-
+  const { addBasket } = useContext(BasketContext)
+  const { addWishlist } = useContext(WishlistContext)
 
   let { id } = useParams();
 
@@ -74,16 +73,9 @@ function Detail() {
                 <p>L</p>
                 <p>XL</p>
               </div>
-              <div className="detail_card_desc_btns">
-                <div className="counter">
-                  <button className="decrease">-</button>
-                  <p>2</p>
-                  <button className="increase">+</button>
-                </div>
-                <button className="buyNow" onClick={()=>addBasket(detail)}>Buy Now</button>
-                <div className="wishlist">
-                  <i className="fa-regular fa-heart" onClick={()=>addWishlist(detail)}></i>
-                </div>
+              <div className="detail_card_desc_btn">
+                <button className="detail_wishlist" onClick={() => addWishlist(detail)}>Add to wishlist</button>
+                <button className="detail_basket" onClick={() => addBasket(detail)}>Add to basket</button>
               </div>
               <div className="detail_card_desc_service">
                 <div className="service">

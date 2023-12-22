@@ -5,6 +5,7 @@ import MainLayout from "./Layouts/MainLayout";
 import Basket from "./Pages/Basket";
 import Wishlist from "./Pages/Wishlist";
 import Detail from "./Pages/Detail";
+import AboutPage from "./Pages/About";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/basket" element={<Basket />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/detail/:id" element={<Detail/>} />
+          <Route path="/about" element={<AboutPage/>} />
         </Route>
       </Routes>
     </BrowserRouter>

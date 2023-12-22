@@ -39,7 +39,9 @@ function BasketProvider({ children }) {
             return
         }
     }
-
+    function getCount (id) {
+        return basket.find(x=>x.id ===id).count
+    }
     function totalPrice() {
         return basket.reduce((total,item)=> total+item.count*item.price,0).toFixed(2)
     }

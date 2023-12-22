@@ -20,7 +20,7 @@ function Basket() {
         </div>
         <BasketCard />
         <div className="basket_footer">
-          <Link to={"/"}><button>Return To Shop</button></Link>
+          <Link to={"/#exploreOurProductsSection"}><button>Return To Shop</button></Link>
           <button>Update Cart</button>
         </div>
         <div className="basket_total_coupon">
