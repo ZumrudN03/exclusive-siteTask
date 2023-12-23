@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.scss'
-import FlashSalesSlider from '../../FlashSalesSlider'
+import FlashSalesSlider from '../../FlashSalesComponents/FlashSalesSlider'
 
 function FlashSalesSection() {
     return (

@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { SearchContext } from "../../Context/search";
 import { BasketContext } from "../../Context/basket";
 import { WishlistContext } from "../../Context/wishlist";
-import SearchBar from "../../Components/SearchBar";
+import SearchBar from "../../Components/HomeComponents/SearchBar";
 
 function Navbar() {
   const { heandleSearch ,showDiv} = useContext(SearchContext)
@@ -100,7 +100,6 @@ function Navbar() {
             >
               <i className="fa-solid fa-cart-shopping"><sup>{basket.length ? basket.length : "0"}</sup></i>
             </NavLink>
-
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import BasketCard from '../../Components/BasketCard'
+import BasketCard from '../../Components/BasketComponents/BasketCard'
 import './index.scss'
 import { BasketContext } from '../../Context/basket'
 import { Link } from 'react-router-dom'

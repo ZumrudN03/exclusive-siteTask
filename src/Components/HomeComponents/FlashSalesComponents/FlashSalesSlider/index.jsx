@@ -1,5 +1,5 @@
 import React from 'react'
-import FlashSalesCard from '../../FlashSalesCard'
+import FlashSalesCard from '../../FlashSalesComponents/FlashSalesCard'
 import './index.scss'
 
 function FlashSalesSlider() {

@@ -3,9 +3,9 @@ import './index.scss';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { BasketContext } from '../../Context/basket';
-import { WishlistContext } from '../../Context/wishlist';
 import { Link } from 'react-router-dom';
+import { WishlistContext } from '../../../../Context/wishlist';
+import { BasketContext } from '../../../../Context/basket';
 
 function FlashSalesCard() {
     const [flashCard, setFlashCard] = useState([]);

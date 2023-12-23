@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './index.scss'
-import WishlistCard from '../../Components/WishlistCard'
+import WishlistCard from '../../Components/WishlistComponents/WishlistCard'
 import { WishlistContext } from '../../Context/wishlist'
 
 function Wishlist() {

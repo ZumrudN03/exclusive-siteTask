@@ -2,8 +2,8 @@ import React from 'react'
 import './index.scss'
 import { Link } from 'react-router-dom'
 import OurStory from '../../Components/AboutComponents/OurStory'
-import SallerCards from '../../Components/AboutComponents/SallerCards'
-import WorkerSlider from '../../Components/AboutComponents/WorkerSlider'
+import SallerCards from '../../Components/AboutComponents/SallerComponents/SallerCards'
+import WorkerSlider from '../../Components/AboutComponents/WorkerComponents/WorkerSlider'
 import ServiceCards from '../../Components/HomeComponents/ServiceComponents/ServiceCards'
 
 function AboutPage() {
